@@ -2,7 +2,7 @@
 
 
 /**
- * binary_tree_delte - a function to delete the tree completely.
+ * binary_tree_delete - a function to delete the tree completely.
  *
  * @tree: is pointer to the root of the tree.
  *
@@ -10,12 +10,12 @@
 */
 void binary_tree_delete(binary_tree_t *tree)
 {
-    if (!tree)
-        return;
-    if (tree->left)
-        binary_tree_delete(tree->left);
-    if (tree->right)
-        binary_tree_delete(tree->right);
-    free(tree);
-    tree = NULL;
+	if (!tree)
+		return;
+	if (tree->left)
+		binary_tree_delete(tree->left);
+	if (tree->right)
+		binary_tree_delete(tree->right);
+	free(tree);
+	tree = NULL;
 }
