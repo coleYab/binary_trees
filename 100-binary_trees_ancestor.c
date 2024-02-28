@@ -30,7 +30,7 @@ binary_tree_t *binary_trees_ancestor(
 	binary_tree_t **parent_storage, *temp, *temp2;
 	int first_depth, i;
 
-	if (!first || !second)
+	if (first == NULL || second == NULL)
 		return (NULL);
 	first_depth = depth(first);
 	parent_storage = malloc(sizeof(binary_tree_t *) * first_depth);
